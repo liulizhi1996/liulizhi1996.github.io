@@ -1,0 +1,21 @@
+h3.customHeader {
+    font-family: Georgia;
+    font-weight: bold;
+    color: #008727;
+}
+
+p.customText {
+    font-family: Georgia;
+    font-size: 13.5pt;
+}
+
+li.customText {
+    font-family: Georgia;
+    font-size: 13.5pt;
+}
+
+li.highlight {
+    font-family: Palatino;
+    font-size: 13.5pt;
+    font-weight: bolder;
+}
