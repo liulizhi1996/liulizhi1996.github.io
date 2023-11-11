@@ -19,3 +19,8 @@ li.highlight {
     font-size: 13.5pt;
     font-weight: bolder;
 }
+
+li.descText {
+    font-family: Baskerville;
+    font-size: 13.5pt;
+}
