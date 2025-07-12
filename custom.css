@@ -1,26 +1,268 @@
-h3.customHeader {
-    font-family: Georgia;
-    font-weight: bold;
-    color: #008727;
+:root {
+    --primary: #008727;
+    --secondary: #deffdf;
+    --accent: #ff6b6b;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --text: #495057;
+    --text-light: #6c757d;
 }
 
-p.customText {
-    font-family: Georgia;
-    font-size: 13.5pt;
+/* Base Styles */
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
 }
 
-li.customText {
-    font-family: Georgia;
-    font-size: 13.5pt;
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--dark);
 }
 
-li.highlight {
-    font-family: Palatino;
-    font-size: 13.5pt;
-    font-weight: bolder;
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
-li.descText {
-    font-family: Baskerville;
-    font-size: 13.5pt;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.card-header {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.highlight {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+b, strong {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: 0.5px;
+    text-shadow: 0.5px 0.5px 0px rgba(0,0,0,0.1);
+}
+
+.customText {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.descText {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Header */
+.hero {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    animation: fadeIn 1s ease;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Sections */
+.section {
+    padding: 1.5rem 0;
+}
+
+.section-title {
+    color: var(--primary);
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--secondary);
+    margin: 1rem auto;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* About Me */
+.profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+    color: var(--accent);
+}
+
+/* Publications & Patents */
+.pub-item, .patent-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.pub-item:last-child, .patent-item:last-child {
+    border-bottom: none;
+}
+
+.pub-title, .patent-title {
+    font-weight: 500;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.pub-authors, .patent-authors {
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.pub-meta, .patent-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 2rem 0;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        font-size: 12pt;
+        background: none;
+        color: black;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
+    }
 }
